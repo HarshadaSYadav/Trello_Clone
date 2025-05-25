@@ -16,7 +16,7 @@ const Dashboard = () => {
 
     const fetchBoards = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/boards', {
+        const response = await fetch('https://trello-clone-rc7n.vercel.app/api/boards', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
