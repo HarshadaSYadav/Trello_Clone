@@ -11,7 +11,7 @@ const SignUp = () => {
     const email = e.target.elements[0].value;
   
     try {
-      const response = await fetch('http://localhost:5000/api/signup', {
+      const response = await fetch('https://trello-clone-rc7n.vercel.app/api/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
