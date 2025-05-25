@@ -1,0 +1,139 @@
+.onboarding {
+  min-height: 100vh;
+  background-color: #1D2125;
+  color: #FFFFFF;
+}
+
+.onboarding-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.onboarding-left {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.onboarding-header {
+  margin-bottom: 4rem;
+}
+
+.onboarding-logo {
+  height: 24px;
+}
+
+.onboarding-content {
+  max-width: 480px;
+}
+
+.onboarding-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: #FFFFFF;
+}
+
+.onboarding-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.option-button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #FFFFFF;
+  text-align: left;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.option-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.option-button.selected {
+  border: 2px solid #0079bf;
+  background-color: #e4f0f63f;
+}
+
+.option-icon {
+  font-size: 1.5rem;
+}
+
+.option-text {
+  font-size: 1rem;
+}
+
+.onboarding-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.continue-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #579DFF;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.continue-button:hover {
+  background-color: #85B4FF;
+}
+
+.skip-button {
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  color: #9FADBC;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.skip-button:hover {
+  color: #FFFFFF;
+}
+
+.onboarding-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.preview-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+  .onboarding-container {
+    flex-direction: column;
+  }
+
+  .onboarding-right {
+    display: none;
+  }
+
+  .onboarding-content {
+    max-width: 100%;
+  }
+}

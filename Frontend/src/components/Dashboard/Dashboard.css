@@ -1,0 +1,450 @@
+.dashboard {
+  min-height: 100vh;
+  background-color: #1D2125;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-header {
+  background-color: #1D2125;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: #9FADBC;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.dashboard-logo {
+  height: 20px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-item {
+  padding: 0.5rem 0.75rem;
+  background: none;
+  border: none;
+  color: #9FADBC;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 0.875rem;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.create-button {
+  padding: 0.5rem 0.75rem;
+  background-color: #579DFF;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+
+.search-icon {
+  color: #9FADBC;
+  margin-right: 0.5rem;
+}
+
+.search-bar input {
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  color: #9FADBC;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  background-color: #579DFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  border: 2px solid red; /* Add this for debugging */
+  cursor: pointer;
+}
+
+.dashboard-sidebar {
+  width: 240px;
+  background-color: #282E33;
+  padding: 1rem;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+  position: fixed;
+  top: 56px;
+}
+
+.workspace-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.workspace-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #579DFF;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workspace-info h2 {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.workspace-type {
+  font-size: 0.75rem;
+  color: #9FADBC;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav .nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  color: #9FADBC;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-bottom: 0.25rem;
+}
+
+.sidebar-nav .nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav .nav-item.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.add-button {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #9FADBC;
+  cursor: pointer;
+}
+
+.dashboard-main {
+  flex: 1;
+  background-color: #A855F7;
+  padding: 1rem;
+  margin-left: 240px;
+}
+
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.board-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.board-title h1 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.star-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.board-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.view-button,
+.filters-button,
+.share-button,
+.more-button {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+}
+
+.board-content {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  min-height: calc(100vh - 160px);
+}
+
+.list {
+  width: 272px;
+  background-color: #282E33;
+  border-radius: 3px;
+  padding: 0.5rem;
+  height: fit-content;
+  position: relative; /* Ensure the dropdown is positioned relative to the list */
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.list-header h3 {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.list-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card {
+  background-color: #22272B;
+  border-radius: 3px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.card h4 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+.add-card-button,
+.add-list-button {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  color: #9FADBC;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.add-card-button:hover,
+.add-list-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.add-list-button {
+  width: 272px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.calendar-view {
+  background: white;
+  padding: 1rem;
+  border-radius: 3px;
+  margin-top: 1rem;
+}
+
+.calendar-view .fc {
+  background: white;
+  padding: 1rem;
+  border-radius: 3px;
+}
+
+.table-view {
+  background: white;
+  padding: 1rem;
+  border-radius: 3px;
+  margin-top: 1rem;
+  color: #1D2125;
+}
+
+.table-view table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-view th,
+.table-view td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.table-view th {
+  font-weight: 500;
+  color: #4B5563;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  text-align: left;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+.logout-button {
+  color: red;
+}
+
+.list-options-dropdown {
+  position: absolute;
+  top: 100%; /* Position it directly below the three dots */
+  right: 0; /* Align it to the right of the list */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 150px; /* Set a fixed width for consistency */
+}
+
+.list-options-dropdown button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.list-options-dropdown button:hover {
+  background-color: #f0f0f0;
+}
+
+.add-member-form {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-member-form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background-color: transparent;
+  color: white;
+}
+
+.add-member-form button {
+  padding: 8px 12px;
+  background-color: #d253eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-member-form button:hover {
+  background-color: #560c5c;
+}
+
+.members-table {
+  margin-top: 20px;
+}
+
+.members-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.members-table th,
+.members-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.members-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}

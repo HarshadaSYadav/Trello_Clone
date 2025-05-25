@@ -1,0 +1,133 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .create-board-modal {
+    background-color: #282E33;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    color: #FFFFFF;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .modal-header h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    color: #9FADBC;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .close-button:hover {
+    color: #FFFFFF;
+  }
+  
+  .background-section {
+    margin-bottom: 20px;
+  }
+  
+  .background-section h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #9FADBC;
+  }
+  
+  .color-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  
+  .color-option {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .color-option:hover {
+    transform: scale(1.05);
+  }
+  
+  .color-option.selected {
+    box-shadow: 0 0 0 2px #FFFFFF;
+  }
+  
+  .board-title-section {
+    margin-bottom: 20px;
+  }
+  
+  .board-title-section label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #9FADBC;
+  }
+  
+  .required {
+    color: #FF5630;
+  }
+  
+  .board-title-section input {
+    width: 100%;
+    padding: 8px 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 14px;
+  }
+  
+  .board-title-section input:focus {
+    outline: none;
+    border-color: #579DFF;
+  }
+  
+  .create-button {
+    width: 100%;
+    padding: 8px 16px;
+    background-color: #579DFF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .create-button:hover {
+    background-color: #85B4FF;
+  }
+  
+  .create-button:disabled {
+    background-color: rgba(87, 157, 255, 0.5);
+    cursor: not-allowed;
+  }

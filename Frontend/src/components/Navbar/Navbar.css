@@ -1,0 +1,143 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-white);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+  z-index: 50;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 var(--spacing-4);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 115px;
+  height: auto;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: var(--font-size-base);
+  color: var(--color-gray-700);
+  padding: var(--spacing-2);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  transition: color var(--transition-fast) ease;
+}
+
+.nav-link:hover {
+  color: var(--color-blue);
+}
+
+.dropdown-indicator {
+  transition: transform var(--transition-fast) ease;
+}
+
+.nav-item:hover .dropdown-indicator {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--color-white);
+  min-width: 260px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all var(--transition-fast) ease;
+  z-index: 20;
+  padding: var(--spacing-2) 0;
+}
+
+.nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  padding: var(--spacing-3) var(--spacing-4);
+  color: var(--color-gray-700);
+  font-size: var(--font-size-sm);
+  transition: background-color var(--transition-fast) ease;
+  display: block;
+}
+
+.dropdown-item:hover {
+  background-color: var(--color-gray-50);
+  color: var(--color-blue);
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.login-btn {
+  color: var(--color-gray-700);
+  font-weight: 500;
+  transition: color var(--transition-fast) ease;
+}
+
+.login-btn:hover {
+  color: var(--color-blue);
+}
+
+.signup-btn {
+  background-color: var(--color-blue-light);
+  color: var(--color-white);
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  transition: background-color var(--transition-fast) ease;
+}
+
+.signup-btn:hover {
+  background-color: var(--color-blue);
+}
+
+.mobile-menu-btn {
+  display: none;
+  color: var(--color-gray-700);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .navbar-menu {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  /* Mobile menu styles would go here */
+}

@@ -1,0 +1,213 @@
+.signup-page {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-gray-50);
+  position: relative;
+  overflow: hidden;
+}
+
+.signup-content {
+  width: 100%;
+  max-width: 480px;
+  margin: auto;
+  padding: var(--spacing-8);
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.signup-background-left,
+.signup-background-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px;
+  height: auto;
+  opacity: 0.8;
+}
+
+.signup-background-left {
+  left: 0;
+  background-image: url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(20%);
+}
+
+.signup-background-right {
+  right: 0;
+  background-image: url('https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(20%);
+}
+
+.signup-logo {
+  width: 160px;
+  margin-bottom: var(--spacing-8);
+}
+
+.signup-title {
+  font-size: var(--font-size-xl);
+  color: var(--color-gray-900);
+  margin-bottom: var(--spacing-6);
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.signup-input {
+  width: 100%;
+  padding: var(--spacing-4);
+  border: 2px solid var(--color-gray-200);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  transition: border-color var(--transition-fast) ease;
+}
+
+.signup-input:focus {
+  border-color: var(--color-blue);
+  outline: none;
+}
+
+.signup-button {
+  width: 100%;
+  padding: var(--spacing-4);
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast) ease;
+}
+
+.signup-button:hover {
+  background-color: var(--color-blue-dark);
+}
+
+.signup-terms {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  margin: var(--spacing-4) 0;
+  text-align: left;
+}
+
+.signup-terms a {
+  color: var(--color-blue);
+  text-decoration: none;
+}
+
+.signup-terms a:hover {
+  text-decoration: underline;
+}
+
+.signup-divider {
+  display: flex;
+  align-items: center;
+  margin: var(--spacing-6) 0;
+  color: var(--color-gray-500);
+  font-size: var(--font-size-sm);
+}
+
+.signup-divider::before,
+.signup-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-gray-300);
+}
+
+.signup-divider span {
+  padding: 0 var(--spacing-4);
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-3);
+  width: 100%;
+  padding: var(--spacing-3);
+  border: 2px solid var(--color-gray-200);
+  border-radius: var(--border-radius);
+  background-color: var(--color-white);
+  color: var(--color-gray-700);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: all var(--transition-fast) ease;
+}
+
+.social-button:hover {
+  background-color: var(--color-gray-50);
+  border-color: var(--color-gray-300);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.login-link {
+  margin-top: var(--spacing-6);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+}
+
+.login-link a {
+  color: var(--color-blue);
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.atlassian-footer {
+  margin-top: var(--spacing-8);
+  text-align: center;
+}
+
+.atlassian-logo {
+  width: 120px;
+  margin-bottom: var(--spacing-4);
+}
+
+.footer-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-2);
+}
+
+.footer-links {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+}
+
+.footer-links a {
+  color: var(--color-gray-600);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .signup-background-left,
+  .signup-background-right {
+    display: none;
+  }
+}

@@ -1,0 +1,241 @@
+.work-smarter {
+  padding: var(--spacing-16) 0;
+  background-color: var(--color-white);
+}
+
+.work-smarter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+}
+
+.work-smarter-label {
+  color: var(--color-gray-600);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-4);
+}
+
+.work-smarter-title {
+  font-size: var(--font-size-4xl);
+  color: var(--color-blue-dark);
+  font-weight: 700;
+  margin-bottom: var(--spacing-6);
+}
+
+.work-smarter-description {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-700);
+  max-width: 800px;
+  margin-bottom: var(--spacing-12);
+  line-height: 1.6;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-8);
+  margin-bottom: var(--spacing-16);
+}
+
+.feature {
+  padding: var(--spacing-4);
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--spacing-4);
+}
+
+.feature-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin-bottom: var(--spacing-4);
+}
+
+.feature-description {
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-6);
+  line-height: 1.6;
+}
+
+.feature-link {
+  display: inline-block;
+  color: var(--color-blue);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--transition-fast) ease;
+}
+
+.feature-link:hover {
+  color: var(--color-blue-dark);
+}
+
+.testimonial-section {
+  background-color: var(--color-gray-50);
+  padding: var(--spacing-12) 0;
+  margin-top: var(--spacing-16);
+}
+
+.testimonial-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-8);
+  align-items: center;
+}
+
+.testimonial-card {
+  background: var(--color-white);
+  padding: var(--spacing-8);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.testimonial-quote {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-800);
+  margin-bottom: var(--spacing-6);
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  margin-bottom: var(--spacing-2);
+  font-weight: 500;
+  color: var(--color-gray-900);
+}
+
+.testimonial-role {
+  color: var(--color-gray-600);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-4);
+}
+
+.testimonial-logo {
+  height: 24px;
+  width: auto;
+}
+
+.testimonial-stat {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  padding: var(--spacing-8);
+  border-radius: var(--border-radius-lg);
+}
+
+.stat-number {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-4);
+}
+
+.stat-text {
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+}
+
+.stat-source {
+  margin-top: var(--spacing-4);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-200);
+}
+
+.stat-source a {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.companies {
+  margin-top: var(--spacing-16);
+  text-align: center;
+}
+
+.companies-title {
+  font-size: var(--font-size-xl);
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-8);
+}
+
+.company-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-8);
+  flex-wrap: wrap;
+}
+
+.company-logo {
+  height: 32px;
+  width: auto;
+  opacity: 0.7;
+  transition: opacity var(--transition-fast) ease;
+}
+
+.company-logo:hover {
+  opacity: 1;
+}
+
+.signup-section {
+  text-align: center;
+  padding: var(--spacing-16) 0;
+}
+
+.signup-title {
+  font-size: var(--font-size-3xl);
+  color: var(--color-blue-dark);
+  font-weight: 700;
+  margin-bottom: var(--spacing-8);
+}
+
+.signup-form {
+  display: flex;
+  gap: var(--spacing-4);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.signup-input {
+  flex: 1;
+  padding: var(--spacing-4);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+}
+
+.signup-button {
+  padding: var(--spacing-4) var(--spacing-8);
+  background-color: var(--color-blue-light);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast) ease;
+}
+
+.signup-button:hover {
+  background-color: var(--color-blue);
+}
+
+@media (max-width: 768px) {
+  .testimonial-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .signup-form {
+    flex-direction: column;
+  }
+  
+  .company-logos {
+    gap: var(--spacing-4);
+  }
+  
+  .company-logo {
+    height: 24px;
+  }
+}
