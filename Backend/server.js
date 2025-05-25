@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 const corsOptions = {
-  origin: "http://localhost:5173", // Make sure this matches your frontend port
+  origin: 'https://trello-clone-nine-fawn.vercel.app', // Make sure this matches your frontend port
   methods: "GET, POST, PUT, DELETE, OPTIONS",
   allowedHeaders: ["Content-Type", "Authorization"], // Corrected allowedHeaders
   credentials: true,
